@@ -1,0 +1,34 @@
+name: tactics 
+base: core22 
+adopt-info: tactics
+grade: stable 
+confinement: strict
+
+parts:
+  tactics:
+    source: https://gitlab.com/leesonwai/tactics.git
+    source-tag: '0.6'
+    source-depth: 1
+    plugin: meson
+    parse-info: [ usr/share/metainfo/io.gitlab.leesonwai.Tactics.metainfo.xml ]
+    meson-parameters:
+      - --prefix=/snap/tactics/current/usr
+      - -Ddevelopment=false
+    organize: 
+      snap/tactics/current: .
+
+
+slots:
+  tactics:
+    interface: dbus
+    bus: session
+    name: io.gitlab.leesonwai.Tactics
+
+apps:
+  tactics:
+    command: usr/bin/tactics
+    extensions:
+      - gnome
+    common-id: io.gitlab.leesonwai.Tactics
+    plugs:
+      - home
