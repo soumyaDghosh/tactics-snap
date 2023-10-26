@@ -7,6 +7,11 @@ license: GPL-3.0-only
 website: https://gitlab.com/leesonwai/tactics
 issues: https://github.com/soumyaDghosh/tactics-snap/issues 
 
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+  - build-on: armhf
+
 parts:
   tactics:
     source: https://gitlab.com/leesonwai/tactics.git
