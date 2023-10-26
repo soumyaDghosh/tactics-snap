@@ -3,6 +3,9 @@ base: core22
 adopt-info: tactics
 grade: stable 
 confinement: strict
+license: GPL-3.0-only
+website: https://gitlab.com/leesonwai/tactics
+issues: https://github.com/soumyaDghosh/tactics-snap/issues 
 
 parts:
   tactics:
